@@ -1,4 +1,4 @@
-<article class="hero">
+<a class="hero" href="/how-to-do-patch-based-review-with-git-range-diff">
   <img
     class="hero-image"
     alt=""
@@ -9,10 +9,12 @@
     <p class="hero-caption">
       5 days ago by Scott Chacon — <i>9 min read</i>
     </p>
-    <h2 class="hero-title">How to do patch-based review with git range-diff</h2>
+    <h2 class="hero-title">
+      Going down the rabbit hole of Git's new bundle-uri
+    </h2>
     <p class="hero-excerpt">
-      Diving into `range-diff`, the little known Git power tool to compare two
-      versions of a series of patches.
+      Git's new bundle-uri could help significantly speed up clones, but what
+      bugs lurk within?
     </p>
     <!-- there is a special css that truncates the text up to 4 lines -->
     <p class="hero-description">
@@ -26,4 +28,4 @@
       get.
     </p>
   </div>
-</article>
+</a>

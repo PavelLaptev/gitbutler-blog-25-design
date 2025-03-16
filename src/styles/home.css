@@ -1,11 +1,18 @@
 /* HERO */
 .hero {
   display: flex;
-  gap: 48px;
+  gap: 40px;
+  margin-bottom: 64px;
 
   @media (max-width: 1020px) {
     flex-direction: column;
     gap: 32px;
+  }
+
+  &:hover {
+    .hero-title {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -38,9 +45,11 @@
 
 .hero-title {
   font-family: 'Instrument Serif', serif;
+  color: var(--clr-text-1);
+  text-wrap: balance;
+  text-decoration: none;
   line-height: 1.05;
   font-size: 58px;
-  color: var(--clr-text-1);
   margin-bottom: 16px;
 
   @media (max-width: 1200px) {
@@ -68,4 +77,67 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* ARTICLE */
+.article-card {
+  &:hover {
+    .article-title {
+      text-decoration: underline;
+    }
+  }
+}
+
+.article-image {
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+  margin-bottom: 28px;
+}
+
+.article-title {
+  font-family: 'Instrument Serif', serif;
+  line-height: 1.1;
+  text-wrap: balance;
+  color: var(--clr-text-1);
+  text-decoration: none;
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.article-caption {
+  font-size: 12px;
+  color: var(--clr-text-2);
+  margin-bottom: 14px;
+}
+
+.article-excerpt {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--clr-text-1);
+  line-height: 1.6;
+}
+
+/* FEATURED ARTICLES */
+.featured-articles {
+  display: flex;
+  gap: 40px;
+}
+
+.featured-articles__large-article {
+  flex: 1;
+}
+
+.featured-articles__artle-and-baner {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.featured-articles__banner {
+  display: flex;
+  border-radius: 20px;
+  background-color: #C8F3F1;
+  padding: 20px;
 }
