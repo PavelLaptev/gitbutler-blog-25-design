@@ -6,7 +6,9 @@
 @import 'design-tokens.css';
 
 /* import other pages */
-@import 'home.css';
+@import 'home/hero.css';
+@import 'home/article-card.css';
+@import 'home/featured-articles.css';
 
 /* styles that are present on all pages */
 & svg {

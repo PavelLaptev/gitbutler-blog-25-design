@@ -1,0 +1,38 @@
+/* ARTICLE */
+.article-card {
+  &:hover {
+    .article-title {
+      text-decoration: underline;
+    }
+  }
+}
+
+.article-image {
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+  margin-bottom: 28px;
+}
+
+.article-title {
+  font-family: 'Instrument Serif', serif;
+  line-height: 1.1;
+  text-wrap: balance;
+  color: var(--clr-text-1);
+  text-decoration: none;
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.article-caption {
+  font-size: 12px;
+  color: var(--clr-text-2);
+  margin-bottom: 14px;
+}
+
+.article-excerpt {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--clr-text-1);
+  line-height: 1.6;
+}

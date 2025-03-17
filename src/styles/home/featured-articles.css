@@ -1,0 +1,23 @@
+/* FEATURED ARTICLES */
+.featured-articles {
+  display: flex;
+  gap: 40px;
+}
+
+.featured-articles__large-article {
+  flex: 1;
+}
+
+.featured-articles__artle-and-baner {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.featured-articles__banner {
+  display: flex;
+  border-radius: 20px;
+  background-color: #C8F3F1;
+  padding: 20px;
+}
