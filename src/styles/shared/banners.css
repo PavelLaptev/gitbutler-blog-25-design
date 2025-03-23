@@ -1,0 +1,40 @@
+.hor-banner-medium {
+  display: flex;
+  align-items: flex-end;
+  border-radius: 20px;
+  background-color: #C8F3F1;
+  overflow: hidden;
+
+  @container (max-width: 1000px) {
+    flex-direction: column;
+    background-color: red;
+  }
+}
+
+.hor-banner-medium__title {
+  flex: 2;
+  color: var(--clr-text-1);
+  display: inline;
+  font-family: var(--text-fontfamily-accent);
+  font-size: 47px;
+  color: currentColor;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  padding: 30px 20px 30px 30px;
+  
+  & svg {
+    flex: 3;
+    display: inline;
+    stroke: currentColor;
+    margin-left: 8px;
+    transform: translateY(6px);
+  }
+}
+
+.hor-banner-medium__image {
+  flex: 3;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: left bottom;
+  height: 100%;
+}

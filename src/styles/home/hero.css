@@ -44,7 +44,7 @@
 }
 
 .hero-title {
-  font-family: 'Instrument Serif', serif;
+  font-family: var(--text-fontfamily-accent);
   color: var(--clr-text-1);
   text-wrap: balance;
   text-decoration: none;

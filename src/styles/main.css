@@ -5,10 +5,14 @@
 @import 'reset.css';
 @import 'design-tokens.css';
 
+/* import shared styles */
+@import 'shared/banners.css';
+
 /* import other pages */
 @import 'home/hero.css';
 @import 'home/article-card.css';
 @import 'home/featured-articles.css';
+@import 'home/yt-promo.css';
 
 /* styles that are present on all pages */
 & svg {
@@ -26,7 +30,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  max-width: 1600px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   padding: 24px 40px;
@@ -65,7 +69,7 @@
 }
 
 .navbar__blog-name {
-  font-family: 'Instrument Serif', serif;
+  font-family: var(--text-fontfamily-accent);
   font-size: 38px;
   letter-spacing: -0.02em;
   line-height: 1;

@@ -398,9 +398,9 @@
 	--size-cta: 32px;
 	--size-icon: 16px;
 	--size-tag: 22px;
-	--text-fontfamily-accent: PP Editorial New;
-	--text-fontfamily-default: Inter;
-	--text-fontfamily-mono: Geist Mono;
+	--text-fontfamily-accent: 'Instrument Serif', serif;
+	--text-fontfamily-default: Inter, sans-serif;
+	--text-fontfamily-mono: Geist Mono, monospace;
 	--text-lineheight-body: 160%;
 	--text-lineheight-default: 120%;
 	--text-weight-bold: 600;

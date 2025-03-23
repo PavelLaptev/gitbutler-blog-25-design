@@ -1,0 +1,18 @@
+.yt-promo {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.yt-promo__large-preview {
+  flex: 1;
+  aspect-ratio: 16/9;
+}
+
+.yt-promo__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
+  background-color:rgb(219, 233, 229);
+}
