@@ -3,6 +3,8 @@
   import Hero from "./lib/home/Hero.svelte";
   import FeaturedArticles from "./lib/home/FeaturedArticles.svelte";
   import YTPromo from "./lib/home/YTPromo.svelte";
+  import ThreeArticleRow from "./lib/ThreeArticleRow.svelte";
+  import Subscribe from "./lib/Subscribe.svelte";
 </script>
 
 <main class="page">
@@ -11,5 +13,8 @@
     <Hero />
     <FeaturedArticles />
     <YTPromo />
+    <ThreeArticleRow />
+    <Subscribe />
+    <ThreeArticleRow />
   </div>
 </main>

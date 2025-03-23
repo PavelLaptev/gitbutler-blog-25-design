@@ -21,7 +21,10 @@
   overflow: hidden;
   object-fit: cover;
   margin-bottom: 28px;
-  aspect-ratio: 3/2;
+
+  @media (max-width: 600px) {
+    margin-bottom: 20px;
+  }
 }
 
 .article-card__title {
@@ -32,6 +35,10 @@
   text-decoration: none;
   font-size: 40px;
   margin-bottom: 8px;
+
+  @media (max-width: 600px) {
+    font-size: 34px;
+  }
 }
 
 .article-card__caption {
@@ -60,6 +67,20 @@
     margin-bottom: 0;
     margin-right: 34px;
   }
+}
 
-  
+.article-card--tablet-hor {
+  @media (max-width: 1020px ) and (min-width: 600px) {
+    flex-direction: row;
+
+    & .article-card__content {
+      flex: 2;
+    }
+
+    & .article-card__image {
+      flex: 1;
+      margin-bottom: 0;
+      margin-right: 34px;
+    }
+  }
 }

@@ -5,18 +5,17 @@
   background-color: #C8F3F1;
   overflow: hidden;
 
-  @container (max-width: 1000px) {
+  @media (max-width: 600px) {
     flex-direction: column;
-    background-color: red;
   }
 }
 
 .hor-banner-medium__title {
-  flex: 2;
+  flex: 3;
   color: var(--clr-text-1);
   display: inline;
   font-family: var(--text-fontfamily-accent);
-  font-size: 47px;
+  font-size: 40px;
   color: currentColor;
   line-height: 1.1;
   letter-spacing: -0.01em;
@@ -29,6 +28,10 @@
     margin-left: 8px;
     transform: translateY(6px);
   }
+
+  @media (max-width: 600px) {
+    padding: 20px 20px 10px 20px;
+  }
 }
 
 .hor-banner-medium__image {
@@ -37,4 +40,6 @@
   object-fit: cover;
   object-position: left bottom;
   height: 100%;
+
+  
 }

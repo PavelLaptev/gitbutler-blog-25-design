@@ -1,4 +1,4 @@
-<div class="featured-articles">
+<section class="featured-articles">
   <a
     class="article-card featured-articles__large-article"
     href="/how-to-do-patch-based-review-with-git-range-diff"
@@ -68,4 +68,4 @@
       />
     </a>
   </div>
-</div>
+</section>

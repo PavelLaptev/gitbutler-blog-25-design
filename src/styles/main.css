@@ -7,10 +7,12 @@
 
 /* import shared styles */
 @import 'shared/banners.css';
+@import 'shared/article-card.css';
+@import 'shared/article-rows.css';
+@import 'shared/subscribe.css';
 
 /* import other pages */
 @import 'home/hero.css';
-@import 'home/article-card.css';
 @import 'home/featured-articles.css';
 @import 'home/yt-promo.css';
 
