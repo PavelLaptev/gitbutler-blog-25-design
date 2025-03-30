@@ -8,9 +8,25 @@
   padding: 60px;
   border-radius: 20px;
   color: #000;
+
+  @media (max-width: 1020px) {
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 40px;
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 40px;
+    border-radius: 0;
+  }
+
+  @media (max-width: 640px) {
+    padding: 30px 20px 40px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }
 
-.subscription__text {
+.subscription__text-wrap {
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -25,6 +41,10 @@
   line-height: 1.1;
   letter-spacing: -0.01em;
   margin-bottom: 20px;
+
+  @media (max-width: 640px) {
+    font-size: 52px;
+  }
 }
 
 .subscription__description {
@@ -34,6 +54,12 @@
   color: currentColor;
   opacity: 0.7;
   max-width: 400px;
+  text-wrap: balance;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    max-width: 100%;
+  }
 }
 
 .subscription__form {
@@ -41,13 +67,16 @@
   display: flex;
   align-items: flex-end;
   gap: 28px;
+ 
+  @media (max-width: 640px) {
+    width: 100%;
+  }
 }
 
 .subscription__input {
   flex: 1;
   padding: 20px 0;
   border-bottom: 2px solid currentColor;
-  font-size: 16px;
   height: fit-content;
   font-size: 40px;
   background-color: transparent;
@@ -55,6 +84,15 @@
   &::placeholder {
     color: currentColor;
     opacity: 0.3;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid var(--clr-theme-pop-element);
+  }
+
+  @media (max-width: 640px) {
+    font-size: 20px;
   }
 }
 
@@ -78,6 +116,12 @@
       width: calc(100% - 2px);
     }
   }
+
+  @media (max-width: 640px) {
+    & span {
+      font-size: 16px;
+    }
+  }
 }
 
 .subscription__button-arrow {
@@ -89,6 +133,8 @@
     position: absolute;
     top: 50%;
     right: 20px;
+    width: 26px;
+    height: 48px;
     transform: translateY(-50%);
     stroke: currentColor;
     transition: all 0.16s ease;
@@ -105,5 +151,14 @@
     background-color: currentColor;
     border-radius: 20px;
     transition: all 0.16s ease;
+  }
+
+  @media (max-width: 640px) {
+    height: 36px;
+
+    & svg {
+      width: 20px;
+      height: 36px;
+    }
   }
 }

@@ -11,10 +11,11 @@
 @import 'shared/article-rows.css';
 @import 'shared/subscribe.css';
 
-/* import other pages */
+/* import home pages */
 @import 'home/hero.css';
 @import 'home/featured-articles.css';
 @import 'home/yt-promo.css';
+@import 'home/articles-list.css';
 
 /* styles that are present on all pages */
 & svg {

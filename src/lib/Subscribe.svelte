@@ -2,7 +2,7 @@
   class="subscription"
   style="background-image: url('./subscribe-bg.svg')"
 >
-  <div class="subscription__text">
+  <div class="subscription__text-wrap">
     <h2 class="subscription__title">Stay in the <i>Loop</i></h2>
     <p class="subscription__description">
       Subscribe to get fresh updates, insights, and exclusive content delivered
@@ -24,18 +24,13 @@
     />
     <button type="submit" class="subscription__button">
       <div class="subscription__button-arrow">
-        <svg
-          width="26"
-          height="48"
-          viewBox="0 0 26 48"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg viewBox="0 0 26 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1.64526 1L24.0001 24L1.64526 47"
             fill="none"
             stroke="#000"
             stroke-width="2"
+            vector-effect="non-scaling-stroke"
           />
         </svg>
       </div>

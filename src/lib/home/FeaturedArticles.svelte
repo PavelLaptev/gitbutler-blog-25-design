@@ -22,7 +22,7 @@
     </div>
   </a>
 
-  <div class="featured-articles__artle-and-baner">
+  <div class="featured-articles__article-and-baner">
     <a class="article-card article-card--hor" href="/how-devs-config-git-core">
       <img
         class="article-card__image"
@@ -63,7 +63,7 @@
 
       <img
         class="hor-banner-medium__image"
-        src="./new-branch-illustration.svg"
+        src="./new-branch-cut-illustration.svg"
         alt=""
       />
     </a>

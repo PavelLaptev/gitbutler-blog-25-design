@@ -5,6 +5,7 @@
   import YTPromo from "./lib/home/YTPromo.svelte";
   import ThreeArticleRow from "./lib/ThreeArticleRow.svelte";
   import Subscribe from "./lib/Subscribe.svelte";
+  import ArticlesList from "./lib/home/ArticlesList.svelte";
 </script>
 
 <main class="page">
@@ -16,5 +17,7 @@
     <ThreeArticleRow />
     <Subscribe />
     <ThreeArticleRow />
+    <ArticlesList />
+    <ThreeArticleRow hasBanner />
   </div>
 </main>
