@@ -1,42 +1,40 @@
 <section class="featured-articles">
   <a
-    class="article-card featured-articles__large-article"
+    class="post-card featured-articles__large-article"
     href="/how-to-do-patch-based-review-with-git-range-diff"
   >
     <img
-      class="article-card__image"
+      class="post-card__image"
       alt=""
       src="https://blog.gitbutler.com/content/images/size/w800/2025/02/git-range-diff.webp"
     />
-    <div class="article-card__content">
-      <h2 class="article-card__title">
+    <div class="post-card__content">
+      <h2 class="post-card__title">
         How to do patch-based review with git range-diff
       </h2>
-      <p class="article-card__caption">
+      <p class="post-card__caption">
         5 days ago by Scott Chacon — <i>9 min read</i>
       </p>
-      <p class="article-card__excerpt">
+      <p class="post-card__excerpt">
         Diving into `range-diff`, the little known Git power tool to compare two
         versions of a series of patches.
       </p>
     </div>
   </a>
 
-  <div class="featured-articles__article-and-baner">
-    <a class="article-card article-card--hor" href="/how-devs-config-git-core">
+  <div class="featured-articles__post-and-baner">
+    <a class="post-card post-card--hor" href="/how-devs-config-git-core">
       <img
-        class="article-card__image"
+        class="post-card__image"
         alt=""
         src="https://blog.gitbutler.com/content/images/size/w800/2025/02/how-devs-config-git-core.webp"
       />
-      <div class="article-card__content">
-        <h2 class="article-card__title">
-          How Core Git Developers Configure Git
-        </h2>
-        <p class="article-card__caption">
+      <div class="post-card__content">
+        <h2 class="post-card__title">How Core Git Developers Configure Git</h2>
+        <p class="post-card__caption">
           5 days ago by Scott Chacon — <i>9 min read</i>
         </p>
-        <p class="article-card__excerpt">
+        <p class="post-card__excerpt">
           What `git config` settings should be defaults by now? Here are some
           settings that even the core developers change.
         </p>

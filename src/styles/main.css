@@ -7,29 +7,31 @@
 
 /* import shared styles */
 @import 'shared/banners.css';
-@import 'shared/article-card.css';
-@import 'shared/article-rows.css';
+@import 'shared/post-card.css';
+@import 'shared/post-rows.css';
 @import 'shared/subscribe.css';
 
-/* import home pages */
+/* import home styles */
 @import 'home/hero.css';
 @import 'home/featured-articles.css';
 @import 'home/yt-promo.css';
 @import 'home/articles-list.css';
 
-/* styles that are present on all pages */
-& svg {
-  fill: currentColor;
-}
+/* import article style */
+@import 'post/post-hero.css';
+@import 'post/post-content.css';
+
 
 .page {
+  --col-gutter: 40px;
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--clr-bg-2);
 }
 
-.page-content {
+.content-wrap {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -43,32 +45,57 @@
   }
 }
 
+.grid-layout {
+  display: grid;
+  grid-template-columns: 40px 10fr 5fr;
+  grid-template-areas: "empty content footnote";
+  gap: var(--col-gutter);
+}
+
 /* NAVBAR */
 .navbar {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
 }
 
 /* navbar logo */
-.navbar__logo-wrapper {
+.navbar__logo-mark-wrapper {
+  justify-self: start;
+  grid-column: empty;
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 18px;
 }
 
 .navbar__logo-mark {
   width: 28px;
   font-weight: 700;
+  grid-area: empty;
 }
 
 .navbar__logo-slash {
+  position: absolute;
+  top: 40%;
+  left: 48px;
   width: 2px;
   height: 28px;
   background-color: var(--clr-text-1);
-  transform: rotate(32deg) scaleX(0.8);
+  transform: rotate(32deg) scaleX(0.8) translateY(-50%);
   opacity: 0.3;
+}
+
+.navbar__content {
+  grid-column: content / footnote;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.navbar__blog-name-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .navbar__blog-name {
@@ -87,6 +114,7 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--clr-text-1);
+  margin-left: 20px;
 
   &:hover {
     text-decoration: underline;

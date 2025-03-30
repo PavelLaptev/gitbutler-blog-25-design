@@ -12,11 +12,11 @@
 
   @media (max-width: 600px) {
   
-    & .article-card {
+    & .post-card {
       flex-direction: column;
     }
   
-    & .article-card__image {
+    & .post-card__image {
       aspect-ratio: 3/2;
       margin-bottom: 20px !important;
     }
@@ -26,27 +26,27 @@
 .featured-articles__large-article {
   flex: 1;
 
-  & .article-card__image {
+  & .post-card__image {
     aspect-ratio: 4/2;
   }
 
   @media (max-width: 1020px) {
     flex-direction: row;
 
-    & .article-card__image {
+    & .post-card__image {
       flex: 1;
       aspect-ratio: 3/2;
       margin-right: 34px;
       margin-bottom: 0;
     }
 
-    & .article-card__content {
+    & .post-card__content {
       flex: 2;
     }
   }
 }
 
-.featured-articles__article-and-baner {
+.featured-articles__post-and-baner {
   flex: 1.5;
   display: flex;
   flex-direction: column;

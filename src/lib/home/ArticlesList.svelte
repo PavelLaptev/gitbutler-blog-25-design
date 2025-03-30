@@ -1,21 +1,21 @@
 <section class="articles-list">
   <a
-    class="article-card articles-list__large-article"
+    class="post-card articles-list__large-article"
     href="/how-to-do-patch-based-review-with-git-range-diff"
   >
     <img
-      class="article-card__image"
+      class="post-card__image"
       alt=""
       src="https://blog.gitbutler.com/content/images/size/w800/2024/10/gitbutler-0.13.webp"
     />
-    <div class="article-card__content">
-      <h2 class="article-card__title">
+    <div class="post-card__content">
+      <h2 class="post-card__title">
         How to do patch-based review with git range-diff
       </h2>
-      <p class="article-card__caption">
+      <p class="post-card__caption">
         5 days ago by Scott Chacon — <i>9 min read</i>
       </p>
-      <p class="article-card__excerpt">
+      <p class="post-card__excerpt">
         Diving into `range-diff`, the little known Git power tool to compare two
         versions of a series of patches.
       </p>
@@ -25,15 +25,15 @@
   <ul class="articles-list__list">
     <li>
       <a
-        class="article-card featured-articles__large-article"
+        class="post-card featured-articles__large-article"
         href="/how-to-do-patch-based-review-with-git-range-diff"
       >
-        <div class="article-card__content">
-          <h2 class="article-card__title">GitButler is now Fair Source</h2>
-          <p class="article-card__caption">
+        <div class="post-card__content">
+          <h2 class="post-card__title">GitButler is now Fair Source</h2>
+          <p class="post-card__caption">
             5 days ago by Scott Chacon — <i>9 min read</i>
           </p>
-          <p class="article-card__excerpt">
+          <p class="post-card__excerpt">
             GitButler is now officially one of the first members of the Fair
             Source movement, helping to shift closed source to publicly
             available software by default.
@@ -43,15 +43,15 @@
     </li>
     <li>
       <a
-        class="article-card featured-articles__large-article"
+        class="post-card featured-articles__large-article"
         href="/how-to-do-patch-based-review-with-git-range-diff"
       >
-        <div class="article-card__content">
-          <h2 class="article-card__title">Git Merge 2024</h2>
-          <p class="article-card__caption">
+        <div class="post-card__content">
+          <h2 class="post-card__title">Git Merge 2024</h2>
+          <p class="post-card__caption">
             5 days ago by Scott Chacon — <i>9 min read</i>
           </p>
-          <p class="article-card__excerpt">
+          <p class="post-card__excerpt">
             GitButler is organizing the 2024 Git Merge conference, Sep 19/20 in
             Berlin!
           </p>
@@ -60,15 +60,15 @@
     </li>
     <li>
       <a
-        class="article-card featured-articles__large-article"
+        class="post-card featured-articles__large-article"
         href="/how-to-do-patch-based-review-with-git-range-diff"
       >
-        <div class="article-card__content">
-          <h2 class="article-card__title">The Birth of THE MERGE</h2>
-          <p class="article-card__caption">
+        <div class="post-card__content">
+          <h2 class="post-card__title">The Birth of THE MERGE</h2>
+          <p class="post-card__caption">
             5 days ago by Scott Chacon — <i>9 min read</i>
           </p>
-          <p class="article-card__excerpt">
+          <p class="post-card__excerpt">
             Sitting at lunch one day, the GitButler team were having our usual
             conversations of how awesome our community is, product feature
             ideas, and how much…
@@ -78,15 +78,15 @@
     </li>
     <li>
       <a
-        class="article-card featured-articles__large-article"
+        class="post-card featured-articles__large-article"
         href="/how-to-do-patch-based-review-with-git-range-diff"
       >
-        <div class="article-card__content">
-          <h2 class="article-card__title">GitButler for Windows</h2>
-          <p class="article-card__caption">
+        <div class="post-card__content">
+          <h2 class="post-card__title">GitButler for Windows</h2>
+          <p class="post-card__caption">
             5 days ago by Scott Chacon — <i>9 min read</i>
           </p>
-          <p class="article-card__excerpt">
+          <p class="post-card__excerpt">
             The GitButler client is now available natively on Windows.
           </p>
         </div>

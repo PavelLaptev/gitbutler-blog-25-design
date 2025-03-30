@@ -1,4 +1,4 @@
-<a class="hero" href="/how-to-do-patch-based-review-with-git-range-diff">
+<a class="hero" href="/article">
   <img
     class="hero-image"
     alt=""

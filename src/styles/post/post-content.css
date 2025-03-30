@@ -1,0 +1,45 @@
+.post-content {
+  & p {
+    grid-column: content;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--clr-text-1);
+  }
+}
+
+.post-share-links {
+  grid-column: empty;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post-share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transition: all 0.2s ease;
+
+ 
+  &.hackernews:hover {
+    color: #EA743D;
+  }
+  &.blsk:hover {
+    color: #4287F6;
+  }
+  &.linkedin:hover {
+    color: #0077B5;
+  }
+  &.twitter:hover {
+    color:rgb(82, 82, 82);
+  }
+  &.copy-link:hover {
+    color: #24B4AD;
+  }
+}
+
+.post-content__body {
+  grid-column: content / footnote;
+}
