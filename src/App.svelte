@@ -1,6 +1,6 @@
 <script lang="ts">
   import Home from "./Home.svelte";
-  import Article from "./Article.svelte";
+  import Post from "./Post.svelte";
 
   let isURLArticle = $state(false);
 
@@ -8,13 +8,13 @@
     console.log("URL changed");
     const url = new URL(window.location.href);
     const path = url.pathname;
-    isURLArticle = path.startsWith("/article");
+    isURLArticle = path.startsWith("/post");
   });
 </script>
 
 <main class="page">
   {#if isURLArticle}
-    <Article />
+    <Post />
   {:else}
     <Home />
   {/if}

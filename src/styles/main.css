@@ -24,7 +24,7 @@
 
 .page {
   --col-gutter: 40px;
-
+  --footnote-width: min(400px, 30vw);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -35,7 +35,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  max-width: 1400px;
+  max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   padding: 24px 40px;
@@ -47,7 +47,7 @@
 
 .grid-layout {
   display: grid;
-  grid-template-columns: 40px 10fr 5fr;
+  grid-template-columns: 40px 10fr var(--footnote-width);
   grid-template-areas: "empty content footnote";
   gap: var(--col-gutter);
 }

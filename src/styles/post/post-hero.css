@@ -4,9 +4,8 @@
   background-color: var(--post-color, rgba(192, 192, 192, 0.20));
 }
 
-
 .post-hero__content {
-  /*  */
+  /* nothing to see here */
 }
 
 .post-hero__about {
@@ -68,7 +67,6 @@
   font-size: 60px;
   line-height: 1.1;
   color: var(--clr-text-1);
-  /* text-wrap: balance; */
 }
 
 .post-hero__excerpt {
@@ -89,7 +87,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 617px;
+  aspect-ratio: 1.4;
+  max-width: unset;
+  height: calc(100% + 120px);
+  object-fit: cover;
   border-radius: 20px;
 
 }

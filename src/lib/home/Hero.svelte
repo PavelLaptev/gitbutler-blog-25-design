@@ -1,4 +1,4 @@
-<a class="hero" href="/article">
+<a class="hero" href="/post">
   <img
     class="hero-image"
     alt=""

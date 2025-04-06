@@ -1,8 +1,8 @@
 <script lang="ts">
-  import ArticleHero from "./lib/post/ArticleHero.svelte";
+  import PostHero from "./lib/post/PostHero.svelte";
 </script>
 
-<ArticleHero />
+<PostHero />
 
 <div class="content-wrap">
   <div class="post-content">
@@ -97,6 +97,37 @@
       </div>
 
       <section class="post-content__body">
+        <div class="post__table-of-contents-wrapper">
+          <div class="post__table-of-contents">
+            <h3>Table <i>of</i> Contents</h3>
+            <ul>
+              <li>
+                <a class="selected" href="#section-1"
+                  >Finding the diff between two branch versions</a
+                >
+              </li>
+              <li>
+                <a href="#section-2">What Changed?</a>
+              </li>
+              <li>
+                <a href="#section-3">A Simple Example</a>
+              </li>
+              <li>
+                <a href="#section-4">Range Diff</a>
+              </li>
+              <li>
+                <a href="#section-5">Diff of Diffs</a>
+              </li>
+              <li>
+                <a href="#section-6">Patch Order</a>
+              </li>
+              <li>
+                <a href="#section-7">Metadata</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <p>
           A few weeks ago I wrote about Git’s help.autocorrect setting and the
           strange tale of the origin of it’s deciseconds value.
@@ -117,32 +148,40 @@
           actually work on the core Git codebase every day.
         </p>
 
-        <div class="post__table-of-contents">
-          <h3>Table of Contents</h3>
-          <ul>
-            <li>
-              <a href="#section-1">Section 1</a>
-            </li>
-            <li>
-              <a href="#section-2">Section 2</a>
-            </li>
-            <li>
-              <a href="#section-3">Section 3</a>
-            </li>
-            <li>
-              <a href="#section-4">Section 4</a>
-            </li>
-            <li>
-              <a href="#section-5">Section 5</a>
-            </li>
-            <li>
-              <a href="#section-6">Section 6</a>
-            </li>
-            <li>
-              <a href="#section-7">Section 7</a>
-            </li>
-          </ul>
-        </div>
+        <pre>
+          <code
+            >time git clone https://gitlab.com/gitlab-org/gitlab-foss.git g1
+Cloning into 'g1'...
+  remote: Enumerating objects: 3005985, done.
+  remote: Counting objects: 100% (314617/314617), done.
+  remote: Compressing objects: 100% (64278/64278), done.
+  remote: Total 3005985 (delta 244429), reused 311002 (delta 241404), 
+          pack-reused 2691368 (from 1)
+  Receiving objects: 100% (3005985/3005985), 1.35 GiB | 23.91 MiB/s
+  Resolving deltas: 100% (2361484/2361484), done.
+  Updating files: 100% (59972/59972), done.
+(*) 162.93s user 37.94s system 128% cpu 2:36.49 total</code
+          >
+        </pre>
+
+        <p>
+          If you interactive rebase, squash, fixup, and otherwise mangle your
+          branch and someone wants to know the interdiff - the difference
+          between the first version of your branch and a subsequent version, how
+          do you find that difference? This is where git range-diff comes into
+          play.
+        </p>
+        <p>
+          There are a few different ways to run the command, but the simplest
+          for this use case I think is the git range diff <base />
+          <head-a>
+            <head-b
+              >. This calculates the range from both of the branch heads to the
+              specified base, which gives you the two patch ranges you're trying
+              to compare. Let's use a real-world, simple example.
+            </head-b></head-a
+          >
+        </p>
       </section>
     </div>
   </div>
