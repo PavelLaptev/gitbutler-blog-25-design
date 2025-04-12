@@ -16,6 +16,9 @@
     padding: 16px;
     border-radius: 8px;
     margin-bottom: var(--element-margin-bottom);
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 
   & pre > code {
