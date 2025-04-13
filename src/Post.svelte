@@ -1,5 +1,8 @@
 <script lang="ts">
   import PostHero from "./lib/post/PostHero.svelte";
+  import PostsCorousel from "./lib/post/PostsCorousel.svelte";
+  import Subscribe from "./lib/Subscribe.svelte";
+  import Footer from "./lib/Footer.svelte";
 </script>
 
 <PostHero />
@@ -97,8 +100,8 @@
       </div>
 
       <section class="post-content__body">
-        <div class="post__table-of-contents-wrapper">
-          <div class="post__table-of-contents">
+        <div class="off-grid-wrapper">
+          <div class="post__table-of-contents off-grid-container">
             <h3>Table <i>of</i> Contents</h3>
             <ul>
               <li>
@@ -171,18 +174,290 @@ Cloning into 'g1'...
           do you find that difference? This is where git range-diff comes into
           play.
         </p>
+
+        <div class="off-grid-wrapper">
+          <figure class="off-grid-container">
+            <iframe
+              class="embed-video"
+              src="https://www.youtube.com/embed/B5VQ0L3uL6M?si=-JHCsm_LSBu6tD59"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+
+            <figcaption>
+              Here is a video of me doing this in action. I’m using the
+              <a
+                href="https://gitlab.com/gitlab-org/gitlab-foss/-/tree/4c0f3b8e1d2c5f7a6b9d4e0f1a2b3c4d5e6f7g8h"
+                rel="noreferrer">GitLab</a
+              >
+              repository as an example, but you can use any repository you want.
+            </figcaption>
+          </figure>
+        </div>
+
         <p>
-          There are a few different ways to run the command, but the simplest
-          for this use case I think is the git range diff <base />
-          <head-a>
-            <head-b
-              >. This calculates the range from both of the branch heads to the
-              specified base, which gives you the two patch ranges you're trying
-              to compare. Let's use a real-world, simple example.
-            </head-b></head-a
-          >
+          Let's try to speed this up by putting all those objects into a
+          packfile, using the newer <code>bundle-uri</code> option to
+          <code>git clone</code> to pull those from a CDN, then doing what should
+          be basically a no-op fetch.
         </p>
+
+        <h2>What is bundle-uri?</h2>
+
+        <p>
+          If you're not familiar with bundle files, it's actually an <em
+            >incredibly</em
+          >
+          old command that was introduced in Git 1.5.1 (in 2007 - 18 years ago) called
+          <code>git bundle</code>, the purpose of which, as stated in the
+          <a
+            href="https://github.com/git/git/blob/cb0ae672aeabefca9704477ea8018ac94f523970/Documentation/RelNotes/1.5.1.adoc?ref=blog.gitbutler.com#L66-L67"
+            rel="noreferrer">release notes</a
+          >, was to make "sneakernetting" easier - putting the repository on a
+          USB stick and walking it around the office.
+        </p>
+
+        <p>
+          Basically it produces a repository in a file - sort of a packfile with
+          a list of references as a pre-header. You can <a
+            href="https://git-scm.com/book/en/v2/Git-Tools-Bundling?ref=blog.gitbutler.com"
+            rel="noreferrer">read all about it</a
+          > in my old Pro Git book if you want to dig into them a bit more.
+        </p>
+
+        <p>
+          So, let's make a repository in a file of the current state of the
+          GitLab codebase, which we can do with <code
+            >git bundle create [file] --all</code
+          >.
+        </p>
+
+        <pre><code
+            >❯ time git bundle create gitlab-base.bundle --all
+          Enumerating objects: 3005710, done.
+          Counting objects: 100% (3005710/3005710), done.
+          Delta compression using up to 8 threads
+          Compressing objects: 100% (582467/582467), done.
+          Writing objects: 100% (3005710/3005710), 1.35 GiB | 194.33 MiB/s, done.
+          Total 3005710 (delta 2361291), reused 3005710 (delta 2361291), pack-reused 0 (from 0)
+          (*)  17.31s user 3.03s system 84% cpu 24.199 total</code
+          ></pre>
+
+        <p>
+          If you think about it, the patches and tarballs workflow is sort of
+          the first distributed version control system - everyone has a local
+          copy, the changes can be made locally, access to "merge" is whomever
+          can push a new tarball to the server.
+        </p>
+
+        <figure>
+          <iframe
+            class="embed-video"
+            src="https://www.youtube.com/embed/MPFgOnACULU?si=54j-BdXXtGS-82mb"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <figcaption>
+            If you want to learn more about Bitkeeper, check out this Bits and
+            Booze episode where we set it up and show you how it was used.
+          </figcaption>
+        </figure>
+
+        <h2 id="the-first-commit">The First Commit</h2>
+
+        <p>
+          Since we're on the topic, what did the <a
+            href="https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290?ref=blog.gitbutler.com"
+            rel="noreferrer">first commit</a
+          > look like? What could Git do from it’s first moment of existence?
+        </p>
+
+        <p>
+          Well, it was a <strong>stupid content tracker</strong>. As Linus
+          himself put it
+          <a
+            href="https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290?ref=blog.gitbutler.com#diff-2b7814d3fca2e99e56c51b6ff2aa313ea6e9da6424804240aa8ad891fdfe0900R15-R17"
+            rel="noreferrer">from day one</a
+          >:
+        </p>
+
+        <blockquote>
+          This is a stupid (but extremely fast) directory content manager. It
+          doesn't do a whole lot, but what it <em>does</em> do is track directory
+          contents efficiently.
+        </blockquote>
+
+        <p>
+          The first commit was a collection of seven simple stand alone tools.
+          They weren’t things like <code>git commit</code>, they were very low
+          level database tools like <code>write-tree</code> and
+          <code>commit-tree</code>
+          (<a
+            href="https://lore.kernel.org/git/Pine.LNX.4.58.0504291416190.18901@ppc970.osdl.org/?ref=blog.gitbutler.com"
+            >this changed</a
+          >
+          a few weeks into the project, when everything started being prefixed with
+          <code>git-</code>).
+        </p>
+
+        <div class="off-grid-wrapper">
+          <div class="post__related-articles off-grid-container">
+            <h3>Related <i>articles</i></h3>
+            <ul>
+              <li>
+                <a href="#section-1">How Core Git Developers Configure Git</a>
+                <p>by Scott Chacon — <i>13 min read</i></p>
+              </li>
+              <li>
+                <a href="#section-2"
+                  >Why is Git Autocorrect too fast for Formula One drivers?</a
+                >
+                <p>by Scott Chacon — <i>8 min read</i></p>
+              </li>
+              <li>
+                <a href="#section-3">Git's Bundle URI</a>
+                <p>by Scott Chacon — <i>5 min read</i></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <ul>
+          <li>
+            Build up a “snapshot” by using <code>update-cache</code> to build a
+            cache of contents (essentially a tarball), and
+            <code>write-tree</code> to write it as an object to the database.
+          </li>
+          <li>
+            Write a "changeset" (commit) with <code>commit-tree</code> that commented
+            on the changes introduced with a new tarball and the parent it was based
+            on in order to setup a history of “tarballs”.
+          </li>
+          <li>
+            Read out those database structures with <code>cat-file</code> (pull
+            an object out of the database), <code>read-tree</code> (list out
+            what the cache looks like) and <code>show-diff</code> (show the diff
+            of the cache to the working directory).
+          </li>
+        </ul>
+
+        <p>
+          From the very first days, Linus <a
+            href="https://lore.kernel.org/git/Pine.LNX.4.58.0504170916080.7211@ppc970.osdl.org/?ref=blog.gitbutler.com"
+            >mentions</a
+          > that he really only wanted to build this plumbing and have it be the
+          backend for some UI (“porcelain”) be scripted on top of it.
+        </p>
+
+        <figure class="kg-card kg-image-card kg-card-hascaption">
+          <img
+            src="https://blog.gitbutler.com/content/images/2025/04/CleanShot-2025-04-05-at-08.30.42@2x.png"
+            alt=""
+            loading="lazy"
+            width="1914"
+            height="1520"
+            srcset="https://blog.gitbutler.com/content/images/size/w600/2025/04/CleanShot-2025-04-05-at-08.30.42@2x.png 600w, https://blog.gitbutler.com/content/images/size/w1000/2025/04/CleanShot-2025-04-05-at-08.30.42@2x.png 1000w, https://blog.gitbutler.com/content/images/size/w1600/2025/04/CleanShot-2025-04-05-at-08.30.42@2x.png 1600w, https://blog.gitbutler.com/content/images/2025/04/CleanShot-2025-04-05-at-08.30.42@2x.png 1914w"
+            sizes="(min-width: 720px) 720px"
+          />
+          <figcaption>
+            <span
+              >The version of git-scm.com that I first put up in 2008. It's a
+              "blob" eating "trees".</span
+            >
+          </figcaption>
+        </figure>
+
+        <p>
+          However, in this world, the version control systems of the time were
+          simply not helpful - they seemed like a step backward in
+          functionality. They had clunky access control mechanisms, they weren’t
+          distributed, they were incredibly slow.
+        </p>
+
+        <p>
+          So, Linus decided to build a new version control system that was
+          distributed, fast, and had a simple access control mechanism. He
+          wanted to be able to do things like <code>git clone</code> and
+          <code>git push</code> without having to worry about the underlying implementation.
+        </p>
+
+        <h3 id="the-first-git-rebase">The first <code>git rebase</code></h3>
+
+        <p>
+          There are lots of these “firsts”, but I’ll just do one more because I
+          find it so interesting. The infamous “rebase” command was <a
+            href="https://lore.kernel.org/git/Pine.LNX.4.58.0506211452110.2353@ppc970.osdl.org/?ref=blog.gitbutler.com"
+            rel="noreferrer">born from a conversation</a
+          > about workflow between Junio and Linus in June 2005.
+        </p>
+
+        <a href="#link">
+          <img
+            class="large-image"
+            src="https://cdn.glitch.global/d7b566eb-2c6b-489c-a6ea-f4518a2c9fc2/gb-banner.jpg?v=1744550947590"
+            alt=""
+          /></a
+        >
+
+        <p>
+          I started using Git for something you might not imagine it was
+          intended for, only a few months after it’s first commit. I then went
+          on to cofound <a
+            href="https://github.com/?ref=blog.gitbutler.com"
+            rel="noreferrer">GitHub</a
+          >, write arguably the most widely read
+          <a href="https://git-scm.com/book/en/v2?ref=blog.gitbutler.com"
+            >book on Git</a
+          >, build the
+          <a
+            href="https://lore.kernel.org/git/d411cc4a0807251035i7aed2ec9wef7e8f1b3ae4c585@mail.gmail.com/?ref=blog.gitbutler.com"
+            >official website</a
+          >
+          of the project, start the
+          <a
+            href="https://github.blog/news-insights/the-library/git-merge-berlin-2013/?ref=blog.gitbutler.com"
+            >annual developer conference</a
+          >, etc - this little project has changed the world of software
+          development, but more personally, it has massively changed the course
+          of my life.
+        </p>
+
+        <div class="post-bio">
+          <img
+            class="post-bio__avatar"
+            src="https://avatars.githubusercontent.com/u/70?v=4"
+            alt="Scott Chacon"
+          />
+          <div class="post-bio__content">
+            <p class="post-bio__title">
+              Written by <a href="#all-articles">Scott Chacon</a>
+            </p>
+            <p class="post-bio__about">
+              Scott Chacon is a co-founder of GitHub and the founder of
+              GitButler, where he builds innovative tools for modern version
+              control. Passionate about open source and developer experience, he
+              has authored Pro Git and spoken globally on Git and software
+              collaboration.
+            </p>
+            <div class="post-bio__links">
+              <a href="#website">Website</a>
+              <a href="#bluesky">Bluesky</a>
+              <a href="#x">X</a>
+            </div>
+          </div>
+        </div>
       </section>
+
+      <PostsCorousel />
+      <Subscribe />
+      <Footer />
     </div>
   </div>
 </div>

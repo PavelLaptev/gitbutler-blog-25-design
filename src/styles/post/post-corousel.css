@@ -1,0 +1,47 @@
+.posts-carousel {
+  grid-column: empty / footnote;
+  display: flex;
+  flex-direction: column;
+}
+
+.posts-carousel__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  & h2 {
+    font-size: 60px;
+    margin: 0;
+  }
+}
+
+.posts-carousel__controls {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.posts-carousel__posts {
+  display: flex;
+  gap: 30px;
+}
+
+.posts-carousel__controls__button {
+  display: flex;
+  align-items: center;
+  padding: 16px 8px;  
+  border-radius: 50px;
+  color: var(--clr-text-1);
+  border: 1px solid var(--clr-border-2);
+  transition: padding 0.2s ease;
+
+  &:hover {
+    padding: 16px 18px;
+  }
+
+  &.inactive {
+    opacity: 0.5;
+    color: var(--clr-text-3);
+    pointer-events: none;
+  }
+}

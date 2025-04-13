@@ -20,11 +20,13 @@
 /* import article style */
 @import 'post/post-hero.css';
 @import 'post/post-content.css';
+@import 'post/post-corousel.css';
 
 
 .page {
   --col-gutter: 40px;
   --footnote-width: min(400px, 30vw);
+  --empty-col-width: 40px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -48,7 +50,7 @@
 
 .grid-layout {
   display: grid;
-  grid-template-columns: 40px 10fr var(--footnote-width);
+  grid-template-columns: var(--empty-col-width) 10fr var(--footnote-width);
   grid-template-areas: "empty content footnote";
   gap: var(--col-gutter);
 }
