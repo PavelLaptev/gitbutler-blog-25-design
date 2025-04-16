@@ -10,6 +10,7 @@
 @import 'shared/post-card.css';
 @import 'shared/post-rows.css';
 @import 'shared/subscribe.css';
+@import 'shared/footer.css';
 
 /* import home styles */
 @import 'home/hero.css';
@@ -97,6 +98,7 @@
 }
 
 .navbar__blog-name-wrapper {
+  z-index: 0;
   display: flex;
   align-items: center;
 }
@@ -122,6 +124,12 @@
   &:hover {
     text-decoration: underline;
   }
+
+  @media (max-width: 1020px) {
+    opacity: 0.4;
+    margin-top: -14px;
+    margin-left: 10px;
+  }
 }
 
 /* navbar links */
@@ -129,6 +137,10 @@
   display: flex;
   gap: 32px;
   align-items: center;
+
+  @media (max-width: 1020px) {
+    display: none;
+  }
 }
 
 .navbar__main-links {
@@ -153,6 +165,7 @@
 .navbar__join-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 6px 6px 6px 8px;
   white-space: nowrap;
@@ -166,5 +179,88 @@
   &:hover {
     background-color: var(--clr-bg-4);
   }
+
+  @media (max-width: 1020px) {
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 12px;
+  }
 }
 
+/* MOBILE MENU */
+.navbar__mobile-menu {
+  z-index: 0;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--clr-bg-1);
+  padding: 24px 20px 32px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.navbar__mobile-menu--active {
+  display: flex;
+}
+
+.navbar__mobile-menu__section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 60px;
+  gap: 16px;
+}
+
+.navbar__mobile-menu__links {
+  & li {
+    margin-bottom: 16px;
+  }
+  & a {
+    /* font-size: 18px; */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.navbar__mobile-menu__button {
+  display:none;
+  pointer: cursor;
+  position: relative;
+  width: 32px;
+  height: 32px;
+
+  &:after, &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-text-1);
+    transition: transform 0.15s ease-in-out;
+  }
+  
+  &:after {
+    transform: translateY(calc(-50% - 6px));
+  }
+  &:before {
+    transform: translateY(calc(-50% + 6px));
+  }
+
+  &:hover {
+    &:after {
+      transform: translateY(calc(-50% - 4px));
+    }
+    &:before {
+      transform: translateY(calc(-50% + 4px));
+    }
+  }
+
+  @media (max-width: 1020px) {
+    display: flex;
+  }
+}

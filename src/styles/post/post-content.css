@@ -124,6 +124,16 @@
       margin-bottom: var(--element-margin-bottom);
     }
   }
+
+
+  /* OBERRIDES */
+  .subscription {
+    margin-bottom: 40px;
+  }
+
+  .three-col-banner {
+    margin-bottom: 40px;
+  }
 }
 
 .large-image {
@@ -143,6 +153,10 @@
 
 .post-content__body {
   grid-column: content;
+
+  @media (max-width: 1020px) {
+    grid-column: content / footnote;
+  }
 }
 
 /* SOCIAL MEDIA SHARE */
@@ -267,6 +281,7 @@
     padding-left: 0;
     columns: 1;
     column-gap: 30px;
+    margin-bottom: 0;
   }
 
   & li {
@@ -359,5 +374,12 @@
     &:last-child:after {
       display: none;
     }
+  }
+}
+
+/* UTILITY */
+.hide-on-tablet {
+  @media (max-width: 1020px) {
+    display: none;
   }
 }

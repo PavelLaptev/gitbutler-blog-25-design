@@ -272,6 +272,22 @@ Cloning into 'g1'...
 
         <h2 id="the-first-commit">The First Commit</h2>
 
+        <div class="off-grid-wrapper">
+          <a
+            class="three-col-banner off-grid-container"
+            href="app.gitbutler.com"
+            target="_blank"
+          >
+            <div
+              class="three-col-banner__image-bg"
+              style="background-image: url('./new-branch-illustration.svg');"
+            ></div>
+            <h1 class="three-col-banner__title">
+              Boost your Git workflow<br />with GitButler
+            </h1>
+          </a>
+        </div>
+
         <p>
           Since we're on the topic, what did the <a
             href="https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290?ref=blog.gitbutler.com"

@@ -16,6 +16,10 @@
   width: 100%;
   max-width: var(--art-content-width);
   padding:  16px 0 40px 0;
+
+  @media (max-width: 1020px) {
+    grid-column: content / footnote;
+  }
 }
 
 .post-hero__meta {
@@ -81,6 +85,10 @@
   position: relative;
   display: flex;
   width: 100%;
+
+  @media (max-width: 1020px) {
+    display: none;
+  }
 }
 
 .post-hero__image img {
