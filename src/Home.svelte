@@ -6,6 +6,7 @@
   import ThreeArticleRow from "./lib/ThreeArticleRow.svelte";
   import Subscribe from "./lib/Subscribe.svelte";
   import ArticlesList from "./lib/home/ArticlesList.svelte";
+  import Footer from "./lib/Footer.svelte";
 </script>
 
 <div class="content-wrap">
@@ -19,4 +20,5 @@
   <ArticlesList />
   <ThreeArticleRow hasBanner />
   <ThreeArticleRow />
+  <Footer />
 </div>

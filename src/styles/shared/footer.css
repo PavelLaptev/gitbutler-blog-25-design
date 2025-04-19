@@ -2,10 +2,16 @@
   grid-column: empty / footnote;
   display: flex;
   gap: 50px;
+  margin-top: 30px;
   margin-bottom: 40px;
 
   @media (max-width: 1020px) {
     flex-direction: column;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 720px) {
+    margin-top: 0;
   }
 }
 
@@ -28,6 +34,7 @@
 .footer__banner__h1 {
   flex: 1;
   font-size: 54px;
+  line-height: 1.2;
   font-family: var(--text-fontfamily-accent);
   margin: 0;
 
