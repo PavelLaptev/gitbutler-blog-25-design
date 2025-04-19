@@ -20,6 +20,12 @@
   @media (max-width: 1020px) {
     grid-column: content / footnote;
   }
+
+  @media (max-width: 720px) {
+    grid-column: empty / footnote;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
 }
 
 .post-hero__meta {
@@ -27,6 +33,11 @@
   justify-content: space-between;
   gap: 20px;
   width: 100%;
+
+  @media (max-width: 1020px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .post-hero__meta-details {
@@ -71,6 +82,10 @@
   font-size: 60px;
   line-height: 1.1;
   color: var(--clr-text-1);
+
+  @media (max-width: 720px) {
+    font-size: 48px;
+  }
 }
 
 .post-hero__excerpt {
@@ -78,6 +93,10 @@
   line-height: 1.6;
   color: var(--clr-text-1);
   text-wrap: balance;
+
+  @media (max-width: 720px) {
+    font-size: 18px;
+  }
 }
 
 .post-hero__image {

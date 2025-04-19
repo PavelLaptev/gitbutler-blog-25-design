@@ -34,7 +34,7 @@
                   fill="#1A1614"
                 />
               </svg>
-              <span>9 min read</span>
+              <span>9 min <span class="hide-on-tablet">read</span></span>
             </p>
           </div>
 

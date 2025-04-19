@@ -21,6 +21,7 @@
             d="M11.3227 42L1 21.5M1 21.5L11.3227 1M1 21.5L31.5 21.5"
             stroke="currentColor"
             stroke-width="1.5"
+            vector-effect="non-scaling-stroke"
           />
         </svg>
       </button>
@@ -36,6 +37,7 @@
             d="M20.6773 1L31 21.5M31 21.5L20.6773 42M31 21.5H0.5"
             stroke="currentColor"
             stroke-width="1.5"
+            vector-effect="non-scaling-stroke"
           />
         </svg>
       </button>

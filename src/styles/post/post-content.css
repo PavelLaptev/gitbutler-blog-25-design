@@ -6,8 +6,8 @@
       font-family: var(--text-fontfamily-accent);
       line-height: 1.1;
       color: var(--clr-text-1);
-      margin-top: 40px;
-      margin-bottom: var(--element-margin-bottom);
+      margin-top: 48px;
+      margin-bottom: 20px;
 
       & code {
         font-family: var(--text-fontfamily-accent);
@@ -85,7 +85,7 @@
       font-family: var(--text-fontfamily-accent);
       font-size: 32px;
       font-style: italic;
-      line-height: 1.6;
+      line-height: 1.5;
       text-align: center;
       padding: 34px 30px;
       margin: 40px 0;
@@ -95,6 +95,11 @@
       &::before, &::after {
         content: '"';
         color: var(--clr-text-2);
+      }
+
+      @media (max-width: 720px) {
+        font-size: 26px;
+        padding: 30px 16px;
       }
     }
 
@@ -126,9 +131,13 @@
   }
 
 
-  /* OBERRIDES */
+  /* OVERRIDES */
   .subscription {
-    margin-bottom: 40px;
+    margin-bottom: 70px;
+
+    @media (max-width: 720px) {
+      margin-bottom: 40px;
+    }
   }
 
   .three-col-banner {
@@ -140,6 +149,12 @@
   margin-left: calc((var(--empty-col-width) + var(--col-gutter)) * -1);
   width: calc(100% + (var(--empty-col-width) + var(--col-gutter)));
   max-width: unset;
+
+  @media (max-width: 720px) {
+    margin-left: 0;
+    width: 100%;
+    max-width: var(--art-content-width);
+  }
 }
 
 .embed-video {
@@ -157,6 +172,10 @@
   @media (max-width: 1020px) {
     grid-column: content / footnote;
   }
+
+  @media (max-width: 720px) {
+    grid-column: empty / footnote;
+  }
 }
 
 /* SOCIAL MEDIA SHARE */
@@ -165,6 +184,12 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  @media (max-width: 720px) {
+    grid-column: empty / footnote;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
 }
 
 .post-share-btn {
@@ -175,7 +200,6 @@
   height: 32px;
   transition: all 0.2s ease;
 
- 
   &.hackernews:hover {
     color: #EA743D;
   }
@@ -318,12 +342,18 @@
   gap: 24px;
   width: calc(100% + (var(--empty-col-width) + var(--col-gutter)));
   margin-top: 50px;
-  /* margin-bottom: 50px; */
+  margin-bottom: 50px;
   margin-left: calc((var(--empty-col-width) + var(--col-gutter)) * -1);
   border-top: 1px solid var(--clr-border-2);
   border-bottom: 1px solid var(--clr-border-2);
   padding: 40px 0 40px calc(var(--empty-col-width) + var(--col-gutter));
 
+
+  @media (max-width: 720px) {
+    width: 100%;
+    margin-left: 0;
+    padding: 40px 0 40px;
+  }
 }
 
 .post-bio__avatar {
@@ -377,8 +407,66 @@
   }
 }
 
-/* UTILITY */
-.hide-on-tablet {
+/* HIRING BANNER */
+.post__hiring-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--clr-theme-pop-soft);
+  padding: 26px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: var(--element-margin-bottom);
+}
+
+.post__hiring-banner__title {
+  margin: 0;
+  font-size: 40px;
+}
+
+.post__hiring-banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post__hiring-banner__position {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.post__hiring-banner__position-title {
+  font-family: var(--text-fontfamily-default);
+  font-size: 16px;
+  text-decoration: underline;
+  color: var(--clr-text-1);
+  margin: 0;
+}
+
+.post__hiring-banner__position-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--clr-text-1);
+  margin: 0;
+  text-decoration: none;
+}
+
+.post__hiring-banner__position-caption {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--clr-text-2);
+  margin: 0;
+  text-decoration: none;
+}
+
+.post__hiring-banner__illustration {
+  align-self: flex-end;
+  width: 170px;
+  margin-top: -20px;
+  margin-bottom: -60px;
+
   @media (max-width: 1020px) {
     display: none;
   }

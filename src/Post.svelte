@@ -1,6 +1,6 @@
 <script lang="ts">
   import PostHero from "./lib/post/PostHero.svelte";
-  import PostsCorousel from "./lib/post/PostsCorousel.svelte";
+  import PostsCarousel from "./lib/post/PostsCarousel.svelte";
   import Subscribe from "./lib/Subscribe.svelte";
   import Footer from "./lib/Footer.svelte";
 </script>
@@ -167,6 +167,52 @@ Cloning into 'g1'...
           >
         </pre>
 
+        <div class="off-grid-wrapper">
+          <div class="post__hiring-banner off-grid-container">
+            <h3 class="post__hiring-banner__title"><i>We’re</i> hiring!</h3>
+            <div class="post__hiring-banner__content">
+              <a
+                class="post__hiring-banner__position"
+                href="https://app.gitbutler.com"
+              >
+                <h4 class="post__hiring-banner__position-title">
+                  Senior TypeScript Developer
+                </h4>
+                <p class="post__hiring-banner__position-description">
+                  We're looking for an experienced TypeScript developer to join
+                  our team in Berlin to help us build the next generation Git
+                  client.
+                </p>
+                <p class="post__hiring-banner__position-caption">
+                  Full-time — BERLIN
+                </p>
+              </a>
+              <a
+                class="post__hiring-banner__position"
+                href="https://app.gitbutler.com"
+              >
+                <h4 class="post__hiring-banner__position-title">
+                  Senior TypeScript Developer
+                </h4>
+                <p class="post__hiring-banner__position-description">
+                  We're looking for an experienced TypeScript developer to join
+                  our team in Berlin to help us build the next generation Git
+                  client.
+                </p>
+                <p class="post__hiring-banner__position-caption">
+                  Full-time — BERLIN
+                </p>
+              </a>
+            </div>
+
+            <img
+              class="post__hiring-banner__illustration"
+              src="./hiring-guy.svg"
+              alt=""
+            />
+          </div>
+        </div>
+
         <p>
           If you interactive rebase, squash, fixup, and otherwise mangle your
           branch and someone wants to know the interdiff - the difference
@@ -174,29 +220,6 @@ Cloning into 'g1'...
           do you find that difference? This is where git range-diff comes into
           play.
         </p>
-
-        <div class="off-grid-wrapper">
-          <figure class="off-grid-container">
-            <iframe
-              class="embed-video"
-              src="https://www.youtube.com/embed/B5VQ0L3uL6M?si=-JHCsm_LSBu6tD59"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-
-            <figcaption>
-              Here is a video of me doing this in action. I’m using the
-              <a
-                href="https://gitlab.com/gitlab-org/gitlab-foss/-/tree/4c0f3b8e1d2c5f7a6b9d4e0f1a2b3c4d5e6f7g8h"
-                rel="noreferrer">GitLab</a
-              >
-              repository as an example, but you can use any repository you want.
-            </figcaption>
-          </figure>
-        </div>
 
         <p>
           Let's try to speed this up by putting all those objects into a
@@ -234,6 +257,29 @@ Cloning into 'g1'...
             >git bundle create [file] --all</code
           >.
         </p>
+
+        <div class="off-grid-wrapper">
+          <figure class="off-grid-container">
+            <iframe
+              class="embed-video"
+              src="https://www.youtube.com/embed/B5VQ0L3uL6M?si=-JHCsm_LSBu6tD59"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+
+            <figcaption>
+              Here is a video of me doing this in action. I’m using the
+              <a
+                href="https://gitlab.com/gitlab-org/gitlab-foss/-/tree/4c0f3b8e1d2c5f7a6b9d4e0f1a2b3c4d5e6f7g8h"
+                rel="noreferrer">GitLab</a
+              >
+              repository as an example, but you can use any repository you want.
+            </figcaption>
+          </figure>
+        </div>
 
         <pre><code
             >❯ time git bundle create gitlab-base.bundle --all
@@ -471,7 +517,7 @@ Cloning into 'g1'...
         </div>
       </section>
 
-      <PostsCorousel />
+      <PostsCarousel />
       <Subscribe />
       <Footer />
     </div>

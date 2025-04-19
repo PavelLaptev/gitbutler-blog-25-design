@@ -71,7 +71,7 @@
   align-items: flex-end;
   gap: 28px;
  
-  @media (max-width: 640px) {
+  @media (max-width: 1020px) {
     width: 100%;
   }
 }
@@ -79,6 +79,7 @@
 .subscription__input {
   flex: 1;
   padding: 20px 0;
+  border-radius: 0;
   border-bottom: 2px solid currentColor;
   height: fit-content;
   font-size: 40px;
@@ -121,8 +122,10 @@
   }
 
   @media (max-width: 640px) {
+    gap: 8px;
+
     & span {
-      font-size: 16px;
+      font-size: 12px;
     }
   }
 }
@@ -132,7 +135,7 @@
   width: 100%;
   height: 46px;
 
- & svg {
+  & svg {
     position: absolute;
     top: 50%;
     right: 20px;
@@ -141,6 +144,7 @@
     transform: translateY(-50%);
     stroke: currentColor;
     transition: all 0.16s ease;
+
   }
 
   &:after {
@@ -160,8 +164,13 @@
     height: 36px;
 
     & svg {
+      right: 0;
       width: 20px;
       height: 36px;
+    }
+
+    &:after {
+      width: calc(100% - 4px);
     }
   }
 }
