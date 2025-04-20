@@ -1,12 +1,12 @@
 <footer class="footer">
   <div
     class="footer__banner"
-    style="background-image: url('./footer-banner-bg.jpg');"
+    style="background-image: url('/footer-banner-bg.jpg');"
   >
     <h2 class="footer__banner__h1">
       <i>F💥ck</i> Merge Conflicts.<br />Use GitButler ⧓
     </h2>
-    <img class="footer__banner__img" src="./footer-baner-pc.svg" alt="" />
+    <img class="footer__banner__img" src="/footer-baner-pc.svg" alt="" />
   </div>
 
   <div class="footer__content">

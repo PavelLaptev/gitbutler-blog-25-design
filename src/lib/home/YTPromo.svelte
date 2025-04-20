@@ -12,12 +12,12 @@
 
   <div
     class="yt-promo__content"
-    style="background-image: url('./yt-banner-bg.png')"
+    style="background-image: url('/yt-banner-bg.png')"
   >
     <div class="yt-promo__header">
       <div class="yt-promo__logos">
-        <img class="yt-promo__logos__bb" src="./b&b-logo.svg" alt="" />
-        <img class="yt-promo__logos__yt" src="./yt-logo.svg" alt="" />
+        <img class="yt-promo__logos__bb" src="/b&b-logo.svg" alt="" />
+        <img class="yt-promo__logos__yt" src="/yt-logo.svg" alt="" />
       </div>
 
       <a

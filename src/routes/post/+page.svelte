@@ -207,7 +207,7 @@ Cloning into 'g1'...
 
             <img
               class="post__hiring-banner__illustration"
-              src="./hiring-guy.svg"
+              src="/hiring-guy.svg"
               alt=""
             />
           </div>
@@ -326,7 +326,7 @@ Cloning into 'g1'...
           >
             <div
               class="three-col-banner__image-bg"
-              style="background-image: url('./new-branch-illustration.svg');"
+              style="background-image: url('/new-branch-illustration.svg');"
             ></div>
             <h1 class="three-col-banner__title">
               Boost your Git workflow<br />with GitButler
@@ -403,9 +403,9 @@ Cloning into 'g1'...
             on in order to setup a history of “tarballs”.
           </li>
           <li>
-            Read out those database structures with <code>cat-file</code> (pull
-            an object out of the database), <code>read-tree</code> (list out
-            what the cache looks like) and <code>show-diff</code> (show the diff
+            Read out those database structures with <code>cat-file</code>
+            (pull an object out of the database), <code>read-tree</code> (list
+            out what the cache looks like) and <code>show-diff</code> (show the diff
             of the cache to the working directory).
           </li>
         </ul>

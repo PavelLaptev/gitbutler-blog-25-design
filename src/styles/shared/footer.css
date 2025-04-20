@@ -95,13 +95,20 @@
   margin: 0;
 
   & li {
-    font-size: 16px;
     margin: 0;
     padding: 0;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  & a {
+    font-size: 16px;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 

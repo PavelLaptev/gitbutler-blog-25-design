@@ -10,9 +10,7 @@
         <div class="post-hero__meta">
           <div class="post-hero__meta-details">
             <p>
-              2 days ago by <a href="https://blog.gitbutler.com/author/scott/"
-                >Scott Chacon</a
-              >
+              2 days ago by <a href="./author/scott/">Scott Chacon</a>
             </p>
             <p>
               <svg

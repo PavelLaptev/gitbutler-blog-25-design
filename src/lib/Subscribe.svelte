@@ -1,6 +1,6 @@
 <section
   class="subscription"
-  style="background-image: url('./subscribe-bg.svg')"
+  style="background-image: url('/subscribe-bg.svg')"
 >
   <div class="subscription__text-wrap">
     <h2 class="subscription__title">Stay in the <i>Loop</i></h2>

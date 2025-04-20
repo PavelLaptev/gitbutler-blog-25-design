@@ -30,7 +30,7 @@
 
     & a {
       color: var(--clr-text-1);
-      text-decoration: underline;
+      text-decoration-line: underline;
       transition: all 0.1s ease;
 
       &:hover {
@@ -440,7 +440,7 @@
 .post__hiring-banner__position-title {
   font-family: var(--text-fontfamily-default);
   font-size: 16px;
-  text-decoration: underline;
+  text-decoration-line: underline;
   color: var(--clr-text-1);
   margin: 0;
 }

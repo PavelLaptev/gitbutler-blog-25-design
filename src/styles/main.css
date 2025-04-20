@@ -33,6 +33,7 @@
   min-height: 100vh;
   background-color: var(--clr-bg-2);
   overflow: hidden;
+  
 }
 
 .content-wrap {
@@ -134,7 +135,7 @@
   margin-left: 20px;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration-line: underline;
   }
 
   @media (max-width: 1020px) {
@@ -169,7 +170,7 @@
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration-line: underline;
     }
   }
 }
@@ -285,6 +286,106 @@
     display: flex;
   }
 }
+
+/* AUTHOR PAGE COM{PNENTS */
+.bio-large {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 670px;
+  gap: 20px;
+  margin: 40px auto 80px;
+
+  @media (max-width: 640px) {
+    margin: 20px auto 50px;
+  }
+}
+
+.bio-large__avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 20px;
+}
+
+.bio-large__title {
+  font-family: var(--text-fontfamily-accent);
+  font-size: 60px;
+  line-height: 1.1;
+  text-align: center;
+
+
+  @media (max-width: 640px) {
+    font-size: 48px;
+  }
+}
+
+.bio-large__about {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--clr-text-2);
+  text-align: center;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+
+.bio-large__links {
+  display: flex;
+
+  & a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration-line: underline;
+    }
+
+    &:not(:last-child):after {
+      content: '|';
+      margin: 0 12px;
+      color: var(--clr-text-2);
+      font-size: 12px;
+    }
+  }
+}
+
+/* TAG PAGE COMPONENTS */
+.tag-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin: 30px auto 60px;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+}
+
+.tag-header__query {
+  font-family: var(--text-fontfamily-accent);
+  font-size: 60px;
+  margin: 0;
+  line-height: 1.1;
+  text-align: center;
+
+  @media (max-width: 640px) {
+    font-size: 52px;
+  }
+}
+
+.tag-header__count {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--clr-text-2);
+  text-align: center;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+
 
 /* UTILITY */
 .hide-on-tablet {

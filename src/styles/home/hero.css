@@ -11,7 +11,10 @@
 
   &:hover {
     .hero-title {
-      text-decoration: underline;
+      text-decoration-line: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px;  
+      text-decoration-color: var(--clr-theme-pop-element); 
     }
   }
 }

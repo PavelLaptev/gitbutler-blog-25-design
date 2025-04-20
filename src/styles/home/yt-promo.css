@@ -79,7 +79,7 @@
 
   &:hover {
     & h2 {
-      text-decoration: underline;
+      text-decoration-line: underline;
     }
   }
 }

@@ -18,7 +18,7 @@
 
   <img
     class="hor-banner-medium__image"
-    src="./new-branch-cut-illustration.svg"
+    src="/new-branch-cut-illustration.svg"
     alt=""
   />
 </a>
