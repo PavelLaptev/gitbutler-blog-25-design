@@ -1,4 +1,4 @@
-<a class="hor-banner-medium" href="app.gitbutler.com" target="_blank">
+<a class="hor-banner-medium" href="https://app.gitbutler.com" target="_blank">
   <h1 class="hor-banner-medium__title">
     Boost your Git workflow with GitButler
     <svg

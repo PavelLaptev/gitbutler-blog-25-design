@@ -9,7 +9,7 @@
 </script>
 
 <section class="three-post-row">
-  <a class="post-card post-card--tablet-hor" href="/how-devs-config-git-core">
+  <a class="post-card post-card--tablet-hor" href="/post">
     <img
       class="post-card__image"
       alt=""
@@ -29,7 +29,7 @@
     </div>
   </a>
 
-  <a class="post-card post-card--tablet-hor" href="/how-devs-config-git-core">
+  <a class="post-card post-card--tablet-hor" href="/post">
     <img
       class="post-card__image"
       alt=""
@@ -50,7 +50,7 @@
   {#if hasBanner}
     <ThreeColumnBanner />
   {:else}
-    <a class="post-card post-card--tablet-hor" href="/how-devs-config-git-core">
+    <a class="post-card post-card--tablet-hor" href="/post">
       <img
         class="post-card__image"
         alt=""

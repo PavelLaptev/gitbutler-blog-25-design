@@ -173,7 +173,7 @@ Cloning into 'g1'...
             <div class="post__hiring-banner__content">
               <a
                 class="post__hiring-banner__position"
-                href="https://app.gitbutler.com"
+                href="https:https://app.gitbutler.com"
               >
                 <h4 class="post__hiring-banner__position-title">
                   Senior TypeScript Developer
@@ -189,7 +189,7 @@ Cloning into 'g1'...
               </a>
               <a
                 class="post__hiring-banner__position"
-                href="https://app.gitbutler.com"
+                href="https:https://app.gitbutler.com"
               >
                 <h4 class="post__hiring-banner__position-title">
                   Senior TypeScript Developer
@@ -321,7 +321,7 @@ Cloning into 'g1'...
         <div class="off-grid-wrapper">
           <a
             class="three-col-banner off-grid-container"
-            href="app.gitbutler.com"
+            href="https://app.gitbutler.com"
             target="_blank"
           >
             <div

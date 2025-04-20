@@ -63,7 +63,7 @@
         </li>
       </ul>
 
-      <a href="https://app.gitbutler.com/" class="navbar__join-btn">
+      <a href="https:https://app.gitbutler.com/" class="navbar__join-btn">
         <span>Join GitButler</span>
         <svg
           width="16"
@@ -189,7 +189,7 @@
         </li>
       </ul>
 
-      <a href="https://app.gitbutler.com/" class="navbar__join-btn">
+      <a href="https:https://app.gitbutler.com/" class="navbar__join-btn">
         <span>Join GitButler</span>
         <svg
           width="16"

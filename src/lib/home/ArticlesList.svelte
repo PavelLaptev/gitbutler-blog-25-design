@@ -1,8 +1,5 @@
 <section class="articles-list">
-  <a
-    class="post-card articles-list__large-article"
-    href="/how-to-do-patch-based-review-with-git-range-diff"
-  >
+  <a class="post-card articles-list__large-article" href="/post">
     <img
       class="post-card__image"
       alt=""
@@ -24,10 +21,7 @@
 
   <ul class="articles-list__list">
     <li>
-      <a
-        class="post-card featured-articles__large-article"
-        href="/how-to-do-patch-based-review-with-git-range-diff"
-      >
+      <a class="post-card featured-articles__large-article" href="/post">
         <div class="post-card__content">
           <h2 class="post-card__title">GitButler is now Fair Source</h2>
           <p class="post-card__caption">
@@ -42,10 +36,7 @@
       </a>
     </li>
     <li>
-      <a
-        class="post-card featured-articles__large-article"
-        href="/how-to-do-patch-based-review-with-git-range-diff"
-      >
+      <a class="post-card featured-articles__large-article" href="/post">
         <div class="post-card__content">
           <h2 class="post-card__title">Git Merge 2024</h2>
           <p class="post-card__caption">
@@ -59,10 +50,7 @@
       </a>
     </li>
     <li>
-      <a
-        class="post-card featured-articles__large-article"
-        href="/how-to-do-patch-based-review-with-git-range-diff"
-      >
+      <a class="post-card featured-articles__large-article" href="/post">
         <div class="post-card__content">
           <h2 class="post-card__title">The Birth of THE MERGE</h2>
           <p class="post-card__caption">
@@ -77,10 +65,7 @@
       </a>
     </li>
     <li>
-      <a
-        class="post-card featured-articles__large-article"
-        href="/how-to-do-patch-based-review-with-git-range-diff"
-      >
+      <a class="post-card featured-articles__large-article" href="/post">
         <div class="post-card__content">
           <h2 class="post-card__title">GitButler for Windows</h2>
           <p class="post-card__caption">

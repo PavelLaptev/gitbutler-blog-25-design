@@ -12,7 +12,7 @@
 
   <form
     class="subscription__form"
-    action="https://app.gitbutler.com/api/v1/subscribe"
+    action="https:https://app.gitbutler.com/api/v1/subscribe"
     method="POST"
   >
     <input

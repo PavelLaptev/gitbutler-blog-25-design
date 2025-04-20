@@ -1,8 +1,5 @@
 <section class="featured-articles">
-  <a
-    class="post-card featured-articles__large-article"
-    href="/how-to-do-patch-based-review-with-git-range-diff"
-  >
+  <a class="post-card featured-articles__large-article" href="/post">
     <img
       class="post-card__image"
       alt=""
@@ -23,11 +20,11 @@
   </a>
 
   <div class="featured-articles__post-and-baner">
-    <a class="post-card post-card--hor" href="/how-devs-config-git-core">
+    <a class="post-card post-card--hor" href="/post">
       <img
         class="post-card__image"
         alt=""
-        src="https://blog.gitbutler.com/content/images/size/w800/2025/02/how-devs-config-git-core.webp"
+        src="https://blog.gitbutler.com/content/images/size/w800/2025/02/post.webp"
       />
       <div class="post-card__content">
         <h2 class="post-card__title">How Core Git Developers Configure Git</h2>
@@ -41,7 +38,11 @@
       </div>
     </a>
 
-    <a class="hor-banner-medium" href="app.gitbutler.com" target="_blank">
+    <a
+      class="hor-banner-medium"
+      href="https://app.gitbutler.com"
+      target="_blank"
+    >
       <h1 class="hor-banner-medium__title">
         Boost your Git workflow with GitButler
         <svg

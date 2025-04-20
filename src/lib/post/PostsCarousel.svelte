@@ -45,7 +45,7 @@
   </div>
 
   <div class="posts-carousel__posts">
-    <a class="post-card post-card--tablet-hor" href="/how-devs-config-git-core">
+    <a class="post-card post-card--tablet-hor" href="/post">
       <img
         class="post-card__image"
         alt=""
@@ -64,7 +64,7 @@
         </p>
       </div>
     </a>
-    <a class="post-card post-card--tablet-hor" href="/how-devs-config-git-core">
+    <a class="post-card post-card--tablet-hor" href="/post">
       <img
         class="post-card__image"
         alt=""
@@ -83,7 +83,7 @@
         </p>
       </div>
     </a>
-    <a class="post-card post-card--tablet-hor" href="/how-devs-config-git-core">
+    <a class="post-card post-card--tablet-hor" href="/post">
       <img
         class="post-card__image"
         alt=""
