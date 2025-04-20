@@ -1,8 +1,8 @@
 <script lang="ts">
-  import PostHero from "./lib/post/PostHero.svelte";
-  import PostsCarousel from "./lib/post/PostsCarousel.svelte";
-  import Subscribe from "./lib/Subscribe.svelte";
-  import Footer from "./lib/Footer.svelte";
+  import PostHero from "$lib/post/PostHero.svelte";
+  import PostsCarousel from "$lib/post/PostsCarousel.svelte";
+  import Subscribe from "$lib/Subscribe.svelte";
+  import Footer from "$lib/Footer.svelte";
 </script>
 
 <PostHero />
