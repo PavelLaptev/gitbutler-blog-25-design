@@ -187,6 +187,36 @@
             </svg>
           </a>
         </li>
+        <li>
+          <button
+            class="navbar__search"
+            aria-label="Search"
+            onclick={() => {
+              console.log("Search clicked");
+            }}
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="8.44444"
+                cy="8.44444"
+                r="4.69444"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M11.5555 11.9444L16.6111 17"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+          </button>
+        </li>
       </ul>
 
       <a href="https:https://app.gitbutler.com/" class="navbar__join-btn">

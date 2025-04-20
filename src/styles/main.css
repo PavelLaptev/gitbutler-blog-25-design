@@ -199,6 +199,15 @@
   }
 }
 
+.navbar__search {
+  width:20px;
+  height:20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
 /* MOBILE MENU */
 .navbar__mobile-menu {
   z-index: 0;
