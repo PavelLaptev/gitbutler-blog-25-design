@@ -24,7 +24,7 @@
       <img
         class="post-card__image"
         alt=""
-        src="https://blog.gitbutler.com/content/images/size/w800/2025/02/post.webp"
+        src="https://blog.gitbutler.com/content/images/size/w800/2025/02/how-devs-config-git-core.webp"
       />
       <div class="post-card__content">
         <h2 class="post-card__title">How Core Git Developers Configure Git</h2>
