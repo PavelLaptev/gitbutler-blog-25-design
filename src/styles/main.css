@@ -61,7 +61,7 @@
 .navbar {
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   
   @media (max-width: 720px) {
     column-gap: 28px;
@@ -334,10 +334,10 @@
   display: flex;
 
   & a {
-    text-decoration: none;
+    text-decoration-line: underline;
 
     &:hover {
-      text-decoration-line: underline;
+      color: var(--clr-theme-pop-element);
     }
 
     &:not(:last-child):after {
