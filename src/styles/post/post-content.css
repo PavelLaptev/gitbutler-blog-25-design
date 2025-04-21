@@ -233,6 +233,11 @@
 /* OFF-GRID SECTIONS */
 .off-grid-wrapper {
   position: relative;
+
+  /* hide on mobile */
+  @media (max-width: 1020px) {
+    display: none;
+  }
 }
 
 .off-grid-container {

@@ -170,6 +170,29 @@ Cloning into 'g1'...
         find that difference? This is where git range-diff comes into play.
       </p>
 
+      <div class="off-grid-wrapper">
+        <figure class="off-grid-container">
+          <iframe
+            class="embed-video"
+            src="https://www.youtube.com/embed/B5VQ0L3uL6M?si=-JHCsm_LSBu6tD59"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <figcaption>
+            Here is a video of me doing this in action. I’m using the
+            <a
+              href="https://gitlab.com/gitlab-org/gitlab-foss/-/tree/4c0f3b8e1d2c5f7a6b9d4e0f1a2b3c4d5e6f7g8h"
+              rel="noreferrer">GitLab</a
+            >
+            repository as an example, but you can use any repository you want.
+          </figcaption>
+        </figure>
+      </div>
+
       <p>
         Let's try to speed this up by putting all those objects into a packfile,
         using the newer <code>bundle-uri</code> option to
@@ -191,27 +214,6 @@ Cloning into 'g1'...
         >, was to make "sneakernetting" easier - putting the repository on a USB
         stick and walking it around the office.
       </p>
-      <div class="off-grid-wrapper">
-        <div class="post__related-articles off-grid-container">
-          <h3>Related <i>articles</i></h3>
-          <ul>
-            <li>
-              <a href="#section-1">How Core Git Developers Configure Git</a>
-              <p>by Scott Chacon — <i>13 min read</i></p>
-            </li>
-            <li>
-              <a href="#section-2"
-                >Why is Git Autocorrect too fast for Formula One drivers?</a
-              >
-              <p>by Scott Chacon — <i>8 min read</i></p>
-            </li>
-            <li>
-              <a href="#section-3">Git's Bundle URI</a>
-              <p>by Scott Chacon — <i>5 min read</i></p>
-            </li>
-          </ul>
-        </div>
-      </div>
 
       <p>
         Basically it produces a repository in a file - sort of a packfile with a
@@ -326,6 +328,28 @@ Cloning into 'g1'...
         > that he really only wanted to build this plumbing and have it be the backend
         for some UI (“porcelain”) be scripted on top of it.
       </p>
+
+      <div class="off-grid-wrapper">
+        <div class="post__related-articles off-grid-container">
+          <h3>Related <i>articles</i></h3>
+          <ul>
+            <li>
+              <a href="#section-1">How Core Git Developers Configure Git</a>
+              <p>by Scott Chacon — <i>13 min read</i></p>
+            </li>
+            <li>
+              <a href="#section-2"
+                >Why is Git Autocorrect too fast for Formula One drivers?</a
+              >
+              <p>by Scott Chacon — <i>8 min read</i></p>
+            </li>
+            <li>
+              <a href="#section-3">Git's Bundle URI</a>
+              <p>by Scott Chacon — <i>5 min read</i></p>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <figure class="kg-card kg-image-card kg-card-hascaption">
         <img
