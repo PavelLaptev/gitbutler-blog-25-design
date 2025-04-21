@@ -1,4 +1,17 @@
 .post-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px 40px 24px;
+  
+    @media (max-width: 640px) {
+      padding: 20px;
+    }
+  
+
   @layer base {
     --element-margin-bottom: 28px;
 
