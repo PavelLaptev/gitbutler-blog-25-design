@@ -141,6 +141,7 @@
         explain what they do and why they should probably be the default
         settings.
       </p>
+
       <p>
         Also, it turns out that I learned most of these from the people who
         actually work on the core Git codebase every day.
@@ -161,52 +162,6 @@ Cloning into 'g1'...
 (*) 162.93s user 37.94s system 128% cpu 2:36.49 total</code
         >
         </pre>
-
-      <div class="off-grid-wrapper">
-        <div class="post__hiring-banner off-grid-container">
-          <h3 class="post__hiring-banner__title"><i>We’re</i> hiring!</h3>
-          <div class="post__hiring-banner__content">
-            <a
-              class="post__hiring-banner__position"
-              href="https:https://app.gitbutler.com"
-            >
-              <h4 class="post__hiring-banner__position-title">
-                Senior TypeScript Developer
-              </h4>
-              <p class="post__hiring-banner__position-description">
-                We're looking for an experienced TypeScript developer to join
-                our team in Berlin to help us build the next generation Git
-                client.
-              </p>
-              <p class="post__hiring-banner__position-caption">
-                Full-time — BERLIN
-              </p>
-            </a>
-            <a
-              class="post__hiring-banner__position"
-              href="https:https://app.gitbutler.com"
-            >
-              <h4 class="post__hiring-banner__position-title">
-                Senior TypeScript Developer
-              </h4>
-              <p class="post__hiring-banner__position-description">
-                We're looking for an experienced TypeScript developer to join
-                our team in Berlin to help us build the next generation Git
-                client.
-              </p>
-              <p class="post__hiring-banner__position-caption">
-                Full-time — BERLIN
-              </p>
-            </a>
-          </div>
-
-          <img
-            class="post__hiring-banner__illustration"
-            src="/hiring-guy.svg"
-            alt=""
-          />
-        </div>
-      </div>
 
       <p>
         If you interactive rebase, squash, fixup, and otherwise mangle your
@@ -236,6 +191,27 @@ Cloning into 'g1'...
         >, was to make "sneakernetting" easier - putting the repository on a USB
         stick and walking it around the office.
       </p>
+      <div class="off-grid-wrapper">
+        <div class="post__related-articles off-grid-container">
+          <h3>Related <i>articles</i></h3>
+          <ul>
+            <li>
+              <a href="#section-1">How Core Git Developers Configure Git</a>
+              <p>by Scott Chacon — <i>13 min read</i></p>
+            </li>
+            <li>
+              <a href="#section-2"
+                >Why is Git Autocorrect too fast for Formula One drivers?</a
+              >
+              <p>by Scott Chacon — <i>8 min read</i></p>
+            </li>
+            <li>
+              <a href="#section-3">Git's Bundle URI</a>
+              <p>by Scott Chacon — <i>5 min read</i></p>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <p>
         Basically it produces a repository in a file - sort of a packfile with a
@@ -251,29 +227,6 @@ Cloning into 'g1'...
           >git bundle create [file] --all</code
         >.
       </p>
-
-      <div class="off-grid-wrapper">
-        <figure class="off-grid-container">
-          <iframe
-            class="embed-video"
-            src="https://www.youtube.com/embed/B5VQ0L3uL6M?si=-JHCsm_LSBu6tD59"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-
-          <figcaption>
-            Here is a video of me doing this in action. I’m using the
-            <a
-              href="https://gitlab.com/gitlab-org/gitlab-foss/-/tree/4c0f3b8e1d2c5f7a6b9d4e0f1a2b3c4d5e6f7g8h"
-              rel="noreferrer">GitLab</a
-            >
-            repository as an example, but you can use any repository you want.
-          </figcaption>
-        </figure>
-      </div>
 
       <pre><code
           >❯ time git bundle create gitlab-base.bundle --all
@@ -312,22 +265,6 @@ Cloning into 'g1'...
 
       <h2 id="the-first-commit">The First Commit</h2>
 
-      <div class="off-grid-wrapper">
-        <a
-          class="three-col-banner off-grid-container"
-          href="https://app.gitbutler.com"
-          target="_blank"
-        >
-          <div
-            class="three-col-banner__image-bg"
-            style="background-image: url('/new-branch-illustration.svg');"
-          ></div>
-          <h1 class="three-col-banner__title">
-            Boost your Git workflow<br />with GitButler
-          </h1>
-        </a>
-      </div>
-
       <p>
         Since we're on the topic, what did the <a
           href="https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290?ref=blog.gitbutler.com"
@@ -362,28 +299,6 @@ Cloning into 'g1'...
         a few weeks into the project, when everything started being prefixed with
         <code>git-</code>).
       </p>
-
-      <div class="off-grid-wrapper">
-        <div class="post__related-articles off-grid-container">
-          <h3>Related <i>articles</i></h3>
-          <ul>
-            <li>
-              <a href="#section-1">How Core Git Developers Configure Git</a>
-              <p>by Scott Chacon — <i>13 min read</i></p>
-            </li>
-            <li>
-              <a href="#section-2"
-                >Why is Git Autocorrect too fast for Formula One drivers?</a
-              >
-              <p>by Scott Chacon — <i>8 min read</i></p>
-            </li>
-            <li>
-              <a href="#section-3">Git's Bundle URI</a>
-              <p>by Scott Chacon — <i>5 min read</i></p>
-            </li>
-          </ul>
-        </div>
-      </div>
 
       <ul>
         <li>
