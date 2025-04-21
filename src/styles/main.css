@@ -26,7 +26,7 @@
 
 .page {
   --col-gutter: 40px;
-  --footnote-width: min(400px, 30vw);
+  --footnote-width: min(340px, 30vw);
   --empty-col-width: 40px;
   display: flex;
   flex-direction: column;
